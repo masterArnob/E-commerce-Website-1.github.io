@@ -1,0 +1,105 @@
+:root {
+   --box-shadow-color: rgba(0, 0, 0, 0.1);
+   --transform-y: -5px;
+   --transition-speed: 0.3s;
+}
+
+.badge {
+   position: absolute;
+   background-color: crimson;
+   color: aliceblue;
+}
+
+.navbar,
+.navbar .navbar-expand-lg {
+   background-color: black;
+   color: white;
+}
+
+.navbar a {
+   color: white;
+}
+
+.navbar .nav-item.active > .nav-link {
+   color: crimson;
+}
+
+.products .container .col-lg-3:hover {
+   box-shadow: 0px 10px 30px var(--box-shadow-color);
+   transform: translateY(var(--transform-y));
+   transition: transform var(--transition-speed) ease-out, box-shadow var(--transition-speed) ease-out;
+}
+
+.offer {
+   background-color: black;
+   color: aliceblue;
+}
+
+.footer {
+   background-color: black;
+   color: aliceblue;
+}
+
+.testimonial-card {
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   transition: all 0.4s ease-in-out;
+}
+
+.testimonial-card:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.8);
+   transition: all 0.4s ease-in-out;
+   transform: translate3d(0, 100%, 0);
+}
+
+.testimonial-card:hover:before {
+   transform: translate3d(0, 0, 0);
+}
+
+.testimonial-card:hover {
+   transform: scale(1.05);
+}
+
+.small-img-group {
+   display: flex;
+}
+
+.small-img-col {
+   flex-basis: 25%;
+   cursor: pointer;
+}
+
+.sproduct select {
+   display: block;
+   padding: 5px 10px;
+}
+
+.sproduct input {
+   width: 50px;
+   height: 40px;
+   padding-left: 10px;
+   font-size: 15px;
+   margin-right: 10px;
+}
+
+.sproduct input:focus {
+   outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+   color: red; /* Replace with your desired hover color */
+   /* Add additional hover styles here */
+}
+
+.navbar a:hover {
+   color: crimson;
+   background-color: black;
+}
